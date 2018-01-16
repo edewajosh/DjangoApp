@@ -4,6 +4,7 @@ from datetime import datetime
 # Create your models here.
 class Posts(models.Model):
   title = models.CharField(max_length=200)
+  image = models.ImageField(null=True)
   body = models.TextField()
   author = models.CharField(max_length=200)
   created_at = models.DateTimeField(default=datetime.now, blank=True)

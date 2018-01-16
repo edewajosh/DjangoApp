@@ -3,7 +3,11 @@
 {% block content %}
 <h4 class="center-align teal dark-4">{{post.title}}</h4>
 <div class="card">
-  
+  <div class="card-image">
+    {% if post.image %}
+      <img class="responsive-img" src="{{ post.image.url }}" alt="The article does not have image">
+    {% endif %}
+  </div>
   <div class="card-content">
     {{post.body}}
   </div>
