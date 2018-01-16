@@ -10,5 +10,6 @@ admin.site.register(Posts, PostsAdmin)
 
 class CommentsAdmin(admin.ModelAdmin):
     list_display = ('text','post', 'pub_date')
+    #field = ('text')
 
 admin.site.register(Comments, CommentsAdmin)

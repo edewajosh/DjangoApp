@@ -1,7 +1,7 @@
 {% extends 'posts/layout.html' %}
 
 {% block content %}
-<h3 class="center-align teal lighten-3">{{title}}</h3>
+<h3 class="center-align teal dark-4">{{title}}</h3>
 <ul class="collection">
   {% for post in posts %}
     <li class="collection-item"><a href="/posts/details/{{post.id}}">{{post.title}}</a></li>
