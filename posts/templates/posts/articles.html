@@ -14,8 +14,8 @@
             <div class="card-content">
               <p>{{ post.title }}</p>
             </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
+            <div class="card-action text-teal text-darken-4">
+              <a href="#">{{ post.body|truncatewords:50|lower }}</a>
             </div>
           </div>
         </div>
