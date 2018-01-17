@@ -7,7 +7,7 @@ from .models import Posts
 def index(request):
   #return HttpResponse('HELLO FROM POSTS')
 
-  posts = Posts.objects.all()[:10]
+  posts = Posts.objects.all().order_by('-created_at')[:6]
 
   context = {
     'title': 'Latest Posts',
@@ -15,6 +15,14 @@ def index(request):
   }
 
   return render(request, 'posts/index.html', context)
+
+def articles(request):
+    posts = Posts.objects.all().order_by('-created_at')
+    context = {
+        'title' : 'All Articles',
+        'posts' : posts
+    }
+    return render(request, 'posts/articles.html', context)
 
 def details(request, id):
   post = Posts.objects.get(id=id)
